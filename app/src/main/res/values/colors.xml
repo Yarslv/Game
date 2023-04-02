@@ -7,4 +7,15 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="game_background1">#13131d</color>
+    <color name="game_red">#ff003b</color>
+    <color name="game_text">#b7b7c1</color>
+    <integer-array name="game_background_colors">
+        <item>0xff13131d</item>
+        <item>0xff846525</item>
+        <item>0xff0a7019</item>
+        <item>0xff140a87</item>
+        <item>0xff6d061d</item>
+    </integer-array>
 </resources>

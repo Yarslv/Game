@@ -1,4 +1,4 @@
-package com.yprodan.player.arch.adapter
+package com.yprodan.game.arch.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
