@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_grapg"
+    app:startDestination="@id/startFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.yprodan.game.ui.fragments.main.GameFragment"
+        android:label="MainFragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/startFragment"
+            app:popUpToInclusive="false">
+            <argument
+                android:name="score"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.yprodan.game.ui.fragments.result.ResultFragment"
+        android:label="ResultFragment" >
+        <argument
+            android:name="score"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_resultFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/startFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_recordListFragment"
+            app:destination="@id/recordListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.yprodan.game.ui.fragments.start.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/startFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordListFragment"
+        android:name="com.yprodan.game.ui.fragments.rate_list.RecordListFragment"
+        android:label="RecordListFragment" />
+</navigation>
